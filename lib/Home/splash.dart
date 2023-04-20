@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:space_cakes/Home/home/home.dart';
+import 'package:space_cakes/login.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   loginRoute() {
     Navigator.pushReplacement(
-        this.context, MaterialPageRoute(builder: (context) => repoHome()));
+        this.context, MaterialPageRoute(builder: (context) => LoginPage()));
   }
 
   @override

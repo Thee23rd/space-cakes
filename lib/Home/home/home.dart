@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:space_cakes/screens/cakecard.dart';
 
 class BottomNavigationBar1 extends StatelessWidget {
   const BottomNavigationBar1({Key? key}) : super(key: key);
@@ -253,43 +252,36 @@ class _repoHomeBig extends State<repoHome> {
                           MaterialPageRoute(
                               builder: ((context) => repoHome())));
                     },
-                    child: GestureDetector(
-                      onTap: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => CakeCard(name: 'Chocklet cake', imageUrl: 'assets/eta.jpg', price: 300)));
-                      },
-                      child: Card(
-                        color: Colors.yellow,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        elevation: 4,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/eta.jpg',
-                              height: 50,
-                              fit: BoxFit.cover,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              'Wedding Cakes',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.black),
-                            )
-                          ],
-                        ),
+                    child: Card(
+                      color: Colors.yellow,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      elevation: 4,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/eta.jpg',
+                            height: 50,
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Wedding Cakes',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(color: Colors.black),
+                          )
+                        ],
                       ),
                     ),
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: ((context) => repoHome())));
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => repoHome()));
                     },
                     child: Card(
                       color: Colors.yellow,
@@ -330,25 +322,23 @@ class _repoHomeBig extends State<repoHome> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       elevation: 4,
-                      child: SingleChildScrollView(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/keke.jpg',
-                              height: 70,
-                              fit: BoxFit.cover,
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Text(
-                              'Plain cakes',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.black),
-                            )
-                          ],
-                        ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/keke.jpg',
+                            height: 70,
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            'Plain cakes',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(color: Colors.black),
+                          )
+                        ],
                       ),
                     ),
                   ),
@@ -519,6 +509,52 @@ class _repoHomeBig extends State<repoHome> {
           ],
         ),
       ),
+      /* bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.blueGrey,
+        items: [
+          BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: (() {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: ((context) => repoHome())));
+                }),
+                child: Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
+              ),
+              label: ("home"),
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.folder,
+                color: Colors.white,
+              ),
+              label: ("MyRepo"),
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.looks,
+                color: Colors.white,
+              ),
+              label: ("Explore"),
+              backgroundColor: Colors.white),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
+              label: ("Profile"),
+              backgroundColor: Colors.blue),
+        ],
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+      ),*/
     );
 
     // ignore: dead_code
